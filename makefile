@@ -26,7 +26,9 @@ UNAME := $(shell uname -s)
 
 
 ifneq (,$(findstring MINGW,$(UNAME)))
-	EXEEXT		:= .exe
+    CC = x86_64-w64-mingw32-gcc
+    CXX = x86_64-w64-mingw32-g++
+    EXEEXT := .exe
 endif
 
 ifneq (,$(findstring Linux,$(shell uname -s)))
