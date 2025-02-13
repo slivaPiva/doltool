@@ -19,9 +19,13 @@ jobs:
       run: |
         make
 
+    - name: List Files
+      run: |
+        ls -R
+
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
         name: executable
-        path: ./doltool$(EXEEXT)
+        path: ./doltool
         retention-days: 1
