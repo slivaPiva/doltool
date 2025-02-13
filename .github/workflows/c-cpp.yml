@@ -23,5 +23,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: executable
-        path: ./your_executable_name
+        path: ./doltool$(EXEEXT)
         retention-days: 1
